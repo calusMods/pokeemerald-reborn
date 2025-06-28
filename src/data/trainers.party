@@ -2123,7 +2123,7 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon @ Nugget
+Skitty @ Nugget
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2527,7 +2527,7 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon @ Nugget
+Meowth Galar @ Nugget
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4798,29 +4798,29 @@ Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer
 
-Geodude
+Geodude Alola
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
 - Rock Tomb
+- Spark
+- Tackle
+- Sandstorm
 
-Geodude
+Glimmet
 Level: 12
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
 - Rock Tomb
+- Poison Sting
+- Tackle
+- Sandstorm
 
-Nosepass @ Oran Berry
+Nosepass @ Eviolite
 Level: 15
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Block
-- Harden
-- Tackle
 - Rock Tomb
+- Bulldoze
+- Block
+- Sandstorm
 
 === TRAINER_BRAWLY_1 ===
 Name: BRAWLY
@@ -5252,8 +5252,12 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Shroomish
-Level: 9
+Snubbull
+Level: 8
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+Pichu
+Level: 8
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_GEORGIA ===
@@ -5953,6 +5957,10 @@ Poochyena
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+Rookidee
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
 === TRAINER_BILLY ===
 Name: BILLY
 Class: Youngster
@@ -5966,7 +5974,7 @@ Zigzagoon
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Seedot
+Taillow
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -5979,7 +5987,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Rockruff
 Level: 10
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Tackle
@@ -5993,11 +6001,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Roggenrola
 Level: 8
 IVs: 13 HP / 13 Atk / 13 Def / 13 SpA / 13 SpD / 13 Spe
 
-Geodude
+Geodude Alola
 Level: 8
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
@@ -6010,8 +6018,12 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Machop
-Level: 9
+Crabrawler
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Zubat
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BEN ===
@@ -6215,12 +6227,12 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
-Level: 4
+Bidoof
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Taillow
-Level: 3
+Azurill
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_TIMMY ===
@@ -9510,7 +9522,7 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Torchic
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9565,7 +9577,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Force Setup First Turn
 
-Torchic
+Mudkip
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9620,7 +9632,7 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
+Treecko
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9675,7 +9687,7 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Torchic
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9730,7 +9742,7 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Torchic
+Mudkip
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9785,7 +9797,7 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
+Treecko
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -10560,11 +10572,11 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Aron
 Level: 8
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
-Geodude
+Glimmet
 Level: 8
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
@@ -11054,11 +11066,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Zigzagoon
-Level: 4
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Shroomish
-Level: 4
+Budew
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_HALEY_1 ===
@@ -11070,7 +11082,7 @@ Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-Lotad
+Smoliv
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11261,7 +11273,11 @@ Wurmple
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wurmple
+Blipbug
+Level: 4
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Surskit
 Level: 4
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11275,19 +11291,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Wurmple
-Level: 3
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wurmple
-Level: 3
+Surskit
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Wurmple
-Level: 3
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Wurmple
-Level: 3
+Kricketot
+Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSE ===
@@ -11299,7 +11311,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Wurmple
+Kricketot
 Level: 8
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
@@ -11363,7 +11375,7 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Nincada
+Blipbug
 Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -11549,7 +11561,11 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Glimmet
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Mankey
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13859,11 +13875,11 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Geodude Alola
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Geodude
+Drilbur
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -13876,11 +13892,11 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Shroomish
+Litleo
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Lotad
+Fletchling
 Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 

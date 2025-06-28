@@ -1,0 +1,738 @@
+script Route102_OnTransition {
+	call(Route102_EventScript_RandomizeEnconters)
+	call_if_eq(VAR_PETALBURG_GYM_STATE, 1, Route102_EventScript_HideEncounters)
+}
+
+script Route102_OnResume {
+	call_if_set(FLAG_SYS_CTRL_OBJ_DELETE, Common_EventScript_RemoveStaticPokemonEncounter)
+}
+
+script Route102_EventScript_HideEncounters {
+	setflag(FLAG_TEMP_A)
+}
+
+script Route102_EventScript_RandomizeEnconters {
+	// Encounter VAR_5
+	setflag(FLAG_TEMP_5)
+	random(10)
+	if(var(VAR_RESULT) < 7) {
+		call(Route102_EventScript_RandomizeEncounterVar5)
+		clearflag(FLAG_TEMP_5)
+	}
+	// Encounter VAR_6
+	setflag(FLAG_TEMP_6)
+	random(10)
+	if(var(VAR_RESULT) < 8) {
+		call(Route102_EventScript_RandomizeEncounterVar6)
+		clearflag(FLAG_TEMP_6)
+	}
+	// Encounter VAR_7
+	setflag(FLAG_TEMP_7)
+	random(10)
+	if(var(VAR_RESULT) < 8) {
+		call(Route102_EventScript_RandomizeEncounterVar7)
+		clearflag(FLAG_TEMP_7)
+	}
+	// Encounter VAR_8
+	setflag(FLAG_TEMP_8)
+	random(10)
+	if(var(VAR_RESULT) < 9) {
+		call(Route102_EventScript_RandomizeEncounterVar8)
+		clearflag(FLAG_TEMP_8)
+	}
+	// Encounter VAR_9
+	setflag(FLAG_TEMP_9)
+	random(10)
+	if(var(VAR_RESULT) < 7) {
+		call(Route102_EventScript_RandomizeEncounterVar9)
+		clearflag(FLAG_TEMP_9)
+	}
+	// Encounter VAR_A
+	setflag(FLAG_TEMP_A)
+	random(10)
+	if(var(VAR_RESULT) < 8) {
+		call(Route102_EventScript_RandomizeEncounterVarA)
+		clearflag(FLAG_TEMP_A)
+	}
+	// Encounter VAR_B
+	setflag(FLAG_TEMP_B)
+	random(10)
+	if(var(VAR_RESULT) < 6) {
+		call(Route102_EventScript_RandomizeEncounterVarB)
+		clearflag(FLAG_TEMP_B)
+	}
+}
+
+script Route102_EventScript_RandomizeEncounterVar5 {
+	random(6)
+	switch(var(VAR_RESULT)) {
+		case 0:
+		case 1:
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_SPECIES(ZIGZAGOON))
+			setvar(VAR_TEMP_5, 0)
+		case 2:
+		case 3:
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_SPECIES(LOTAD))
+			setvar(VAR_TEMP_5, 1)
+		case 4:
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_SPECIES(WURMPLE))
+			setvar(VAR_TEMP_5, 2)
+		case 5:
+			setvar(VAR_OBJ_GFX_ID_5, OBJ_EVENT_GFX_SPECIES(AZURILL))
+			setvar(VAR_TEMP_5, 3)
+	}
+}
+
+script Route102_EventScript_EncounterVar5 {
+	lock
+	switch(var(VAR_TEMP_5)) {
+		case 0:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_ZIGZAGOON, 3, FLAG_TEMP_5)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_ZIGZAGOON, 4, FLAG_TEMP_5)
+				case 3:
+					dowildencounter(SPECIES_ZIGZAGOON, 5, FLAG_TEMP_5)
+			}
+		case 1:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_LOTAD, 3, FLAG_TEMP_5)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_LOTAD, 4, FLAG_TEMP_5)
+				case 3:
+					dowildencounter(SPECIES_LOTAD, 5, FLAG_TEMP_5)
+			}
+		case 2:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_WURMPLE, 3, FLAG_TEMP_5)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_WURMPLE, 4, FLAG_TEMP_5)
+				case 3:
+					dowildencounter(SPECIES_WURMPLE, 5, FLAG_TEMP_5)
+			}
+		case 3:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_AZURILL, 3, FLAG_TEMP_5)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_AZURILL, 4, FLAG_TEMP_5)
+				case 3:
+					dowildencounter(SPECIES_AZURILL, 5, FLAG_TEMP_5)
+			}
+	}
+	release
+}
+
+script Route102_EventScript_RandomizeEncounterVar6 {
+	random(5)
+	switch(var(VAR_RESULT)) {
+		case 0:
+		case 1:
+			setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_SPECIES(ZIGZAGOON))
+			setvar(VAR_TEMP_6, 0)
+		case 2:
+			setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_SPECIES(WURMPLE))
+			setvar(VAR_TEMP_6, 1)
+		case 3:
+			setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_SPECIES(POOCHYENA))
+			setvar(VAR_TEMP_6, 2)
+		case 4:
+			setvar(VAR_OBJ_GFX_ID_6, OBJ_EVENT_GFX_SPECIES(BUDEW))
+			setvar(VAR_TEMP_6, 3)
+	}
+}
+
+script Route102_EventScript_EncounterVar6 {
+	lock
+	switch(var(VAR_TEMP_6)) {
+		case 0:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_ZIGZAGOON, 3, FLAG_TEMP_6)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_ZIGZAGOON, 4, FLAG_TEMP_6)
+				case 3:
+					dowildencounter(SPECIES_ZIGZAGOON, 5, FLAG_TEMP_6)
+			}
+		case 1:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_WURMPLE, 3, FLAG_TEMP_6)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_WURMPLE, 4, FLAG_TEMP_6)
+				case 3:
+					dowildencounter(SPECIES_WURMPLE, 5, FLAG_TEMP_6)
+			}
+		case 2:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_POOCHYENA, 3, FLAG_TEMP_6)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_POOCHYENA, 4, FLAG_TEMP_6)
+				case 3:
+					dowildencounter(SPECIES_POOCHYENA, 5, FLAG_TEMP_6)
+			}
+		case 3:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_BUDEW, 3, FLAG_TEMP_6)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_BUDEW, 4, FLAG_TEMP_6)
+				case 3:
+					dowildencounter(SPECIES_BUDEW, 5, FLAG_TEMP_6)
+			}
+	}
+	release
+}
+
+script Route102_EventScript_RandomizeEncounterVar7 {
+	random(5)
+	switch(var(VAR_RESULT)) {
+		case 0:
+			setvar(VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_SPECIES(ZIGZAGOON))
+			setvar(VAR_TEMP_7, 0)
+		case 1:
+		case 2:
+			setvar(VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_SPECIES(WURMPLE))
+			setvar(VAR_TEMP_7, 1)
+		case 3:
+			setvar(VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_SPECIES(POOCHYENA))
+			setvar(VAR_TEMP_7, 2)
+		case 4:
+			setvar(VAR_OBJ_GFX_ID_7, OBJ_EVENT_GFX_SPECIES(BUDEW))
+			setvar(VAR_TEMP_7, 3)
+	}
+}
+
+script Route102_EventScript_EncounterVar7 {
+	lock
+	switch(var(VAR_TEMP_7)) {
+		case 0:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_ZIGZAGOON, 3, FLAG_TEMP_7)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_ZIGZAGOON, 4, FLAG_TEMP_7)
+				case 3:
+					dowildencounter(SPECIES_ZIGZAGOON, 5, FLAG_TEMP_7)
+			}
+		case 1:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_WURMPLE, 3, FLAG_TEMP_7)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_WURMPLE, 4, FLAG_TEMP_7)
+				case 3:
+					dowildencounter(SPECIES_WURMPLE, 5, FLAG_TEMP_7)
+			}
+		case 2:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_POOCHYENA, 3, FLAG_TEMP_7)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_POOCHYENA, 4, FLAG_TEMP_7)
+				case 3:
+					dowildencounter(SPECIES_POOCHYENA, 5, FLAG_TEMP_7)
+			}
+		case 3:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_BUDEW, 3, FLAG_TEMP_7)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_BUDEW, 4, FLAG_TEMP_7)
+				case 3:
+					dowildencounter(SPECIES_BUDEW, 5, FLAG_TEMP_7)
+			}
+	}
+	release
+}
+
+script Route102_EventScript_RandomizeEncounterVar8 {
+	random(10)
+	switch(var(VAR_RESULT)) {
+		case 0:
+		case 1:
+		case 2:
+			setvar(VAR_OBJ_GFX_ID_8, OBJ_EVENT_GFX_SPECIES(ZIGZAGOON))
+			setvar(VAR_TEMP_8, 0)
+		case 3:
+		case 4:
+			setvar(VAR_OBJ_GFX_ID_8, OBJ_EVENT_GFX_SPECIES(LOTAD))
+			setvar(VAR_TEMP_8, 1)
+		case 5:
+		case 6:
+			setvar(VAR_OBJ_GFX_ID_8, OBJ_EVENT_GFX_SPECIES(WURMPLE))
+			setvar(VAR_TEMP_8, 2)
+		case 7:
+			setvar(VAR_OBJ_GFX_ID_8, OBJ_EVENT_GFX_SPECIES(POOCHYENA))
+			setvar(VAR_TEMP_8, 3)
+		case 8:
+			setvar(VAR_OBJ_GFX_ID_8, OBJ_EVENT_GFX_SPECIES(AZURILL))
+			setvar(VAR_TEMP_8, 4)
+		case 9:
+			setvar(VAR_OBJ_GFX_ID_8, OBJ_EVENT_GFX_SPECIES(BUDEW))
+			setvar(VAR_TEMP_8, 5)
+	}
+}
+
+script Route102_EventScript_EncounterVar8 {
+	lock
+	switch(var(VAR_TEMP_8)) {
+		case 0:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_ZIGZAGOON, 3, FLAG_TEMP_8)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_ZIGZAGOON, 4, FLAG_TEMP_8)
+				case 3:
+					dowildencounter(SPECIES_ZIGZAGOON, 5, FLAG_TEMP_8)
+			}
+		case 1:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_LOTAD, 3, FLAG_TEMP_8)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_LOTAD, 4, FLAG_TEMP_8)
+				case 3:
+					dowildencounter(SPECIES_LOTAD, 5, FLAG_TEMP_8)
+			}
+		case 2:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_WURMPLE, 3, FLAG_TEMP_8)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_WURMPLE, 4, FLAG_TEMP_8)
+				case 3:
+					dowildencounter(SPECIES_WURMPLE, 5, FLAG_TEMP_8)
+			}
+		case 3:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_POOCHYENA, 3, FLAG_TEMP_8)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_POOCHYENA, 4, FLAG_TEMP_8)
+				case 3:
+					dowildencounter(SPECIES_POOCHYENA, 5, FLAG_TEMP_8)
+			}
+		case 4:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_AZURILL, 3, FLAG_TEMP_8)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_AZURILL, 4, FLAG_TEMP_8)
+				case 3:
+					dowildencounter(SPECIES_AZURILL, 5, FLAG_TEMP_8)
+			}
+		case 5:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_BUDEW, 3, FLAG_TEMP_8)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_BUDEW, 4, FLAG_TEMP_8)
+				case 3:
+					dowildencounter(SPECIES_BUDEW, 5, FLAG_TEMP_8)
+			}
+	}
+	release
+}
+
+script Route102_EventScript_RandomizeEncounterVar9 {
+	random(10)
+	switch(var(VAR_RESULT)) {
+		case 0:
+		case 1:
+			setvar(VAR_OBJ_GFX_ID_9, OBJ_EVENT_GFX_SPECIES(ZIGZAGOON))
+			setvar(VAR_TEMP_9, 0)
+		case 2:
+		case 3:
+			setvar(VAR_OBJ_GFX_ID_9, OBJ_EVENT_GFX_SPECIES(LOTAD))
+			setvar(VAR_TEMP_9, 1)
+		case 4:
+		case 5:
+			setvar(VAR_OBJ_GFX_ID_9, OBJ_EVENT_GFX_SPECIES(WURMPLE))
+			setvar(VAR_TEMP_9, 2)
+		case 6:
+		case 7:
+			setvar(VAR_OBJ_GFX_ID_9, OBJ_EVENT_GFX_SPECIES(POOCHYENA))
+			setvar(VAR_TEMP_9, 3)
+		case 8:
+			setvar(VAR_OBJ_GFX_ID_9, OBJ_EVENT_GFX_SPECIES(AZURILL))
+			setvar(VAR_TEMP_9, 4)
+		case 9:
+			setvar(VAR_OBJ_GFX_ID_9, OBJ_EVENT_GFX_SPECIES(BUDEW))
+			setvar(VAR_TEMP_9, 5)
+	}
+}
+
+script Route102_EventScript_EncounterVar9 {
+	lock
+	switch(var(VAR_TEMP_9)) {
+		case 0:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_ZIGZAGOON, 3, FLAG_TEMP_9)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_ZIGZAGOON, 4, FLAG_TEMP_9)
+				case 3:
+					dowildencounter(SPECIES_ZIGZAGOON, 5, FLAG_TEMP_9)
+			}
+		case 1:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_LOTAD, 3, FLAG_TEMP_9)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_LOTAD, 4, FLAG_TEMP_9)
+				case 3:
+					dowildencounter(SPECIES_LOTAD, 5, FLAG_TEMP_9)
+			}
+		case 2:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_WURMPLE, 3, FLAG_TEMP_9)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_WURMPLE, 4, FLAG_TEMP_9)
+				case 3:
+					dowildencounter(SPECIES_WURMPLE, 5, FLAG_TEMP_9)
+			}
+		case 3:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_POOCHYENA, 3, FLAG_TEMP_9)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_POOCHYENA, 4, FLAG_TEMP_9)
+				case 3:
+					dowildencounter(SPECIES_POOCHYENA, 5, FLAG_TEMP_9)
+			}
+		case 4:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_AZURILL, 3, FLAG_TEMP_9)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_AZURILL, 4, FLAG_TEMP_9)
+				case 3:
+					dowildencounter(SPECIES_AZURILL, 5, FLAG_TEMP_9)
+			}
+		case 5:
+			random(4)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_BUDEW, 3, FLAG_TEMP_9)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_BUDEW, 4, FLAG_TEMP_9)
+				case 3:
+					dowildencounter(SPECIES_BUDEW, 5, FLAG_TEMP_9)
+			}
+	}
+	release
+}
+
+script Route102_EventScript_RandomizeEncounterVarA {
+	random(5)
+	switch(var(VAR_RESULT)) {
+		case 0:
+			setvar(VAR_OBJ_GFX_ID_A, OBJ_EVENT_GFX_SPECIES(ZIGZAGOON))
+			setvar(VAR_TEMP_A, 0)
+		case 1:
+			setvar(VAR_OBJ_GFX_ID_A, OBJ_EVENT_GFX_SPECIES(WURMPLE))
+			setvar(VAR_TEMP_A, 1)
+		case 2:
+			setvar(VAR_OBJ_GFX_ID_A, OBJ_EVENT_GFX_SPECIES(POOCHYENA))
+			setvar(VAR_TEMP_A, 2)
+		case 3:
+			setvar(VAR_OBJ_GFX_ID_A, OBJ_EVENT_GFX_SPECIES(BUDEW))
+			setvar(VAR_TEMP_A, 3)
+		case 4:
+			setvar(VAR_OBJ_GFX_ID_A, OBJ_EVENT_GFX_SPECIES(RALTS))
+			setvar(VAR_TEMP_A, 4)
+	}
+}
+
+script Route102_EventScript_EncounterVarA {
+	lock
+	switch(var(VAR_TEMP_A)) {
+		case 0:
+			random(5)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_ZIGZAGOON, 3, FLAG_TEMP_A)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_ZIGZAGOON, 4, FLAG_TEMP_A)
+				case 3:
+				case 4:
+					dowildencounter(SPECIES_ZIGZAGOON, 5, FLAG_TEMP_A)
+			}
+		case 1:
+			random(5)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_WURMPLE, 3, FLAG_TEMP_A)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_WURMPLE, 4, FLAG_TEMP_A)
+				case 3:
+				case 4:
+					dowildencounter(SPECIES_WURMPLE, 5, FLAG_TEMP_A)
+			}
+		case 2:
+			random(5)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_POOCHYENA, 3, FLAG_TEMP_A)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_POOCHYENA, 4, FLAG_TEMP_A)
+				case 3:
+				case 4:
+					dowildencounter(SPECIES_POOCHYENA, 5, FLAG_TEMP_A)
+			}
+		case 3:
+			random(5)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_BUDEW, 3, FLAG_TEMP_A)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_BUDEW, 4, FLAG_TEMP_A)
+				case 3:
+				case 4:
+					dowildencounter(SPECIES_BUDEW, 5, FLAG_TEMP_A)
+			}
+		case 4:
+			random(5)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_RALTS, 3, FLAG_TEMP_A)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_RALTS, 4, FLAG_TEMP_A)
+				case 3:
+				case 4:
+					dowildencounter(SPECIES_RALTS, 5, FLAG_TEMP_A)
+			}
+	}
+	release
+}
+
+script Route102_EventScript_RandomizeEncounterVarB {
+	random(4)
+	switch(var(VAR_RESULT)) {
+		case 0:
+		case 1:
+			setvar(VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_SPECIES(WURMPLE))
+			setvar(VAR_TEMP_B, 0)
+		case 2:
+			setvar(VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_SPECIES(BUDEW))
+			setvar(VAR_TEMP_B, 1)
+		case 3:
+			setvar(VAR_OBJ_GFX_ID_B, OBJ_EVENT_GFX_SPECIES(RALTS))
+			setvar(VAR_TEMP_B, 2)
+	}
+}
+
+script Route102_EventScript_EncounterVarB {
+	lock
+	switch(var(VAR_TEMP_B)) {
+		case 0:
+			random(5)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_WURMPLE, 3, FLAG_TEMP_A)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_WURMPLE, 4, FLAG_TEMP_A)
+				case 3:
+				case 4:
+					dowildencounter(SPECIES_WURMPLE, 5, FLAG_TEMP_A)
+			}
+		case 1:
+			random(5)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_BUDEW, 3, FLAG_TEMP_A)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_BUDEW, 4, FLAG_TEMP_A)
+				case 3:
+				case 4:
+					dowildencounter(SPECIES_BUDEW, 5, FLAG_TEMP_A)
+			}
+		case 2:
+			random(5)
+			switch(var(VAR_RESULT)) {
+				case 0:
+					dowildencounter(SPECIES_RALTS, 3, FLAG_TEMP_A)
+				case 1:
+				case 2:
+					dowildencounter(SPECIES_RALTS, 4, FLAG_TEMP_A)
+				case 3:
+				case 4:
+					dowildencounter(SPECIES_RALTS, 5, FLAG_TEMP_A)
+			}
+	}
+	release
+}
+
+raw `
+Route102_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route102_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, Route102_OnResume
+	.byte 0
+
+Route102_EventScript_LittleBoy::
+	msgbox Route102_Text_ImNotVeryTall, MSGBOX_NPC
+	end
+
+Route102_EventScript_RouteSignOldale::
+	msgbox Route102_Text_RouteSignOldale, MSGBOX_SIGN
+	end
+
+Route102_EventScript_RouteSignPetalburg::
+	msgbox Route102_Text_RouteSignPetalburg, MSGBOX_SIGN
+	end
+
+Route102_EventScript_Boy::
+	msgbox Route102_Text_CatchWholeBunchOfPokemon, MSGBOX_NPC
+	end
+
+Route102_EventScript_Calvin::
+	trainerbattle_single TRAINER_CALVIN_1, Route102_Text_CalvinIntro, Route102_Text_CalvinDefeated, Route102_EventScript_CalvinRegisterMatchCallAfterBattle
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	goto_if_eq VAR_RESULT, TRUE, Route102_EventScript_CalvinRematch
+	setvar VAR_0x8004, TRAINER_CALVIN_1
+	specialvar VAR_RESULT, IsTrainerRegistered
+	goto_if_eq VAR_RESULT, FALSE, Route102_EventScript_CalvinTryRegister
+	msgbox Route102_Text_CalvinPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_EventScript_CalvinRegisterMatchCallAfterBattle::
+	special PlayerFaceTrainerAfterBattle
+	waitmovement 0
+	goto_if_set FLAG_HAS_MATCH_CALL, Route102_EventScript_CalvinRegisterMatchCall
+	release
+	end
+
+Route102_EventScript_CalvinRegisterMatchCall::
+	msgbox Route102_Text_CalvinRegisterShort, MSGBOX_DEFAULT
+	register_matchcall TRAINER_CALVIN_1
+	release
+	end
+
+Route102_EventScript_CalvinTryRegister::
+	goto_if_set FLAG_HAS_MATCH_CALL, Route102_EventScript_CalvinRegister
+	msgbox Route102_Text_CalvinPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_EventScript_CalvinRegister::
+	msgbox Route102_Text_CalvinRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_CALVIN_1
+	release
+	end
+
+Route102_EventScript_CalvinRematch::
+	trainerbattle_rematch TRAINER_CALVIN_1, Route102_Text_CalvinRematchIntro, Route102_Text_CalvinRematchDefeated
+	msgbox Route102_Text_CalvinRematchPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route102_EventScript_Rick::
+	trainerbattle_single TRAINER_RICK, Route102_Text_RickIntro, Route102_Text_RickDefeated
+	msgbox Route102_Text_RickPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route102_EventScript_Tiana::
+	trainerbattle_single TRAINER_TIANA, Route102_Text_TianaIntro, Route102_Text_TianaDefeated
+	msgbox Route102_Text_TianaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route102_EventScript_Allen::
+	trainerbattle_single TRAINER_ALLEN, Route102_Text_AllenIntro, Route102_Text_AllenDefeated
+	msgbox Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Route102_Text_WatchMeCatchPokemon:
+	.string "WALLY: {PLAYER}…\n"
+	.string "POKéMON hide in tall grass like this,\l"
+	.string "don't they?\p"
+	.string "Please watch me and see if I can\n"
+	.string "catch one properly.\p"
+	.string "…Whoa!$"
+
+Route102_Text_WallyIDidIt:
+	.string "WALLY: I did it… It's my…\n"
+	.string "My POKéMON!$"
+
+Route102_Text_LetsGoBack:
+	.string "{PLAYER}, thank you!\n"
+	.string "Let's go back to the GYM!$"
+
+Route102_Text_ImNotVeryTall:
+	.string "I'm…not very tall, so I sink right\n"
+	.string "into tall grass.\p"
+	.string "The grass goes up my nose and…\n"
+	.string "Fwafwafwafwafwa…\p"
+	.string "Fwatchoo!$"
+
+Route102_Text_CatchWholeBunchOfPokemon:
+	.string "I'm going to catch a whole bunch of\n"
+	.string "POKéMON!$"
+
+Route102_Text_RouteSignOldale:
+	.string "ROUTE 102\n"
+	.string "{RIGHT_ARROW} OLDALE TOWN$"
+
+Route102_Text_RouteSignPetalburg:
+	.string "ROUTE 102\n"
+	.string "{LEFT_ARROW} PETALBURG CITY$"
+`

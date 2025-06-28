@@ -102,9 +102,63 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route101_EventScript_Boy",
       "flag": "FLAG_HIDE_ROUTE_101_BOY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_5",
+      "x": 2,
+      "y": 17,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route101_EventScript_EncounterVar5",
+      "flag": "FLAG_TEMP_5"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_6",
+      "x": 13,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route101_EventScript_EncounterVar6",
+      "flag": "FLAG_TEMP_6"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_7",
+      "x": 15,
+      "y": 3,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route101_EventScript_EncounterVar7",
+      "flag": "FLAG_TEMP_7"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_8",
+      "x": 0,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route101_EventScript_EncounterVar8",
+      "flag": "FLAG_TEMP_8"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+
+  ],
   "coord_events": [
     {
       "type": "trigger",

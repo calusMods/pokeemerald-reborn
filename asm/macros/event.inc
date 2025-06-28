@@ -2510,3 +2510,18 @@
 	compare \a, \b
 	cant_see_if 5
 	.endm
+
+	@new macro
+	.macro dowildencounter species:req, level:req, flag:req
+	setwildbattle \species, \level
+	waitse
+	faceplayer
+	playmoncry \species, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	dowildbattle
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	setflag \flag
+	return
+	.endm

@@ -118,8 +118,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
-      "x": 12,
-      "y": 15,
+      "x": 13,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -141,12 +141,51 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_HIDE_PETALBURG_CITY_SCOTT"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_5",
+      "x": 22,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PetalburgCity_EventScript_EncounterVar5",
+      "flag": "FLAG_TEMP_5"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_6",
+      "x": 14,
+      "y": 27,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 3,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PetalburgCity_EventScript_EncounterVar6",
+      "flag": "FLAG_TEMP_6"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VAR_7",
+      "x": 9,
+      "y": 22,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PetalburgCity_EventScript_RandomizeEncounterVar7",
+      "flag": "FLAG_TEMP_7"
     }
   ],
   "warp_events": [
     {
       "x": 10,
-      "y": 19,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_HOUSE1",
       "dest_warp_id": "0"
@@ -173,8 +212,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 20,
-      "y": 24,
+      "x": 19,
+      "y": 23,
       "elevation": 0,
       "dest_map": "MAP_PETALBURG_CITY_HOUSE2",
       "dest_warp_id": "0"
